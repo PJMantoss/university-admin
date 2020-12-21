@@ -12,8 +12,9 @@ import {
     Feature 
 } from './styles/header';
 
-export default function Header({ bg=true, children, ...restProps }){
-    return <Background {...restProps}>{children}</Background>
+export default function Header({ bg = true, children, ...restProps }){
+    //show background image on bigger screens only
+    return bg ? <Background {...restProps}>{children}</Background> : children
 }
 
 Header.Frame = function HeaderFrame({ children, ...restProps }){
