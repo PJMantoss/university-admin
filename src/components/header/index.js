@@ -9,7 +9,7 @@ import {
     Link, 
     Text, 
     Profile,
-    Feature 
+    Picture
 } from './styles/header';
 
 export default function Header({ bg = true, children, ...restProps }){
@@ -33,10 +33,6 @@ Header.Logo = function HeaderLogo({ to, ...restProps }){
     )
 };
 
-Header.Feature = function HeaderFeature({ children, ...restProps }){
-    return <Feature {...restProps}>{children}</Feature>
-}
-
 Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }){
     return <ButtonLink {...restProps}>{children}</ButtonLink>
 }
@@ -52,3 +48,8 @@ Header.Text = function HeaderText({ children, ...restProps }){
 Header.Profile = function HeaderProfile({ children, ...restProps }){
     return <Profile {...restProps}>{children}</Profile>
 }
+
+Header.Picture = function HeaderPicture({ src, ...restProps }){
+    return <Picture {...restProps} src="#" />
+}
+//{`./images/users/${src}.png`}

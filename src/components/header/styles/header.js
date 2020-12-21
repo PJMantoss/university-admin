@@ -20,9 +20,11 @@ export const Container = styled.div`
     padding: 18px 0;
     justify-content: space-between;
     align-items: center;
+    
     a {
         display: flex;
     }
+    
     @media (max-width: 1000px){
         margin: 0 30px;
     }
@@ -34,9 +36,11 @@ export const Link = styled.p`
     margin-right: 30px;
     font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
     cursor: pointer;
+
     &:hover{
         font-weight: bold;
     }
+
     &:last-of-type {
         margin-right: 0;
     }
@@ -44,7 +48,7 @@ export const Link = styled.p`
 
 export const ButtonLink = styled(MainRouterLink)`
     display: block;
-    background: #e50914;
+    background: #000;
     color: white;
     width: 84px;
     height: fit-content;
@@ -55,6 +59,7 @@ export const ButtonLink = styled(MainRouterLink)`
     cursor: pointer;
     text-decoration: none;
     box-sizing: border-box;
+
     &:hover {
         background: #f40612;
     }
@@ -64,6 +69,7 @@ export const Logo = styled.img`
     height: 32px;
     width: 108px;
     margin-right: 40px;
+
     @media(min-width: 1449px){
         height: 45px;
         width: 167px;
@@ -80,4 +86,24 @@ export const Text = styled.p`
     line-height: normal;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.45);
+`;
+
+export const Picture = styled.button`
+    background: url(${({ src }) => src});
+    background-size: contain;
+    border: 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+`;
+
+export const Profile = styled.div`
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    position: relative;
+
+    button {
+        cursor: pointer;
+    }
 `;
