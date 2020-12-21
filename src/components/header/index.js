@@ -3,6 +3,7 @@ import {
     Background, 
     Container, 
     Group, 
+    ButtonLink,
     Link, 
     Text, 
     Profile 
@@ -18,6 +19,10 @@ Header.Frame = function HeaderFrame({ children, ...restProps }){
 
 Header.Group = function HeaderGroup({ children, ...restProps }){
     return <Group {...restProps}>{children}</Group>
+}
+
+Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }){
+    return <ButtonLink {...restProps}>{children}</ButtonLink>
 }
 
 Header.Link = function HeaderLink({ children, ...restProps }){
