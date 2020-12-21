@@ -1,12 +1,15 @@
 import React from 'react';
+import { Link as MainRouterLink} from 'react-router-dom';
 import { 
     Background, 
     Container, 
     Group, 
+    Logo,
     ButtonLink,
     Link, 
     Text, 
-    Profile 
+    Profile,
+    Feature 
 } from './styles/header';
 
 export default function Header({ bg=true, children, ...restProps }){
@@ -20,6 +23,14 @@ Header.Frame = function HeaderFrame({ children, ...restProps }){
 Header.Group = function HeaderGroup({ children, ...restProps }){
     return <Group {...restProps}>{children}</Group>
 }
+
+Header.Logo = function HeaderLogo({ to, ...restProps }){
+    return(
+        <MainRouterLink to={to}>
+            <Logo {...restProps} />
+        </MainRouterLink>
+    )
+};
 
 Header.Feature = function HeaderFeature({ children, ...restProps }){
     return <Feature {...restProps}>{children}</Feature>
