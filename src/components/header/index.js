@@ -21,6 +21,10 @@ Header.Group = function HeaderGroup({ children, ...restProps }){
     return <Group {...restProps}>{children}</Group>
 }
 
+Header.Feature = function HeaderFeature({ children, ...restProps }){
+    return <Feature {...restProps}>{children}</Feature>
+}
+
 Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }){
     return <ButtonLink {...restProps}>{children}</ButtonLink>
 }
