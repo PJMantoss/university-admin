@@ -1,8 +1,7 @@
 import React from 'react';
-import { Home } from './pages';
+import { Home, Signin } from './pages';
 import * as ROUTES from './routes/routes';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
 
 function App() {
   return (
@@ -12,7 +11,7 @@ function App() {
             <Home />
         </Route>
         <Route path={ROUTES.SIGN_IN}>
-            <p>Sign In Page</p>
+            <Signin />
         </Route>
         <Route path={ROUTES.SIGN_UP}>
             <p>Sign Up Page</p>

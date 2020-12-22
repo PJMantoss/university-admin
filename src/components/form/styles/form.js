@@ -66,7 +66,7 @@ export const Link = styled(MainRouterLink)`
 `;
 
 export const Submit = styled.button`
-    background: #000;
+    background: #e50914;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
