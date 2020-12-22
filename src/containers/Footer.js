@@ -8,7 +8,7 @@ export function FooterContainer(){
             <Footer.Break/>
             <Footer.Row></Footer.Row>
             <Footer.Break/>
-            <Footer.Text></Footer.Text>
+            <Footer.Text>Admin University All Rights Reserved 2020</Footer.Text>
         </Footer>
     )
 }
