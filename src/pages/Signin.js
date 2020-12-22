@@ -41,6 +41,18 @@ export default function Signin(){
                             autocomplete="off"
                             placeholder="Password" 
                         />
+
+                        <Form.Submit disabled={isInvalid} type="submit">
+                            Sign In
+                        </Form.Submit>
+
+                        <Form.Text>
+                            Not an Admin? <Form.Link to="/signup">Register Now!</Form.Link>
+                        </Form.Text>
+
+                        <Form.TextSmall>
+                            This page is protected by Google reCAPTCHA.
+                        </Form.TextSmall>
                     </Form.Base>
                 </Form>
             </HeaderContainer>
