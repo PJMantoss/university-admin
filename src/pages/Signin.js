@@ -15,6 +15,36 @@ export default function Signin(){
         e.preventDefault();
         //call in firebase to handle authentication
     }
-    
-    return()
+
+    //form validation
+    const isInvalid = password === '' | emailAddress === '';
+
+    return(
+        <>
+            <HeaderContainer>
+                <Form>
+                    <Form.Title>Sign In</Form.Title>
+                    {error && <Form.Error>{error}</Form.Error>}
+
+                    <Form.Base onSubmit={handleSignin} method="POST">
+                        <Form.Input
+                            type="email" 
+                            onChange={({ target }) => setEmailAddress(target.value)} 
+                            value={emailAddress} 
+                            placeholder="Email" 
+                        />
+
+                        <Form.Input
+                            type="password" 
+                            onChange={({ target }) => setPassword(target.value)} 
+                            value={password} 
+                            autocomplete="off"
+                            placeholder="Password" 
+                        />
+                    </Form.Base>
+                </Form>
+            </HeaderContainer>
+            <FooterContainer></FooterContainer>
+        </>
+    )
 }
