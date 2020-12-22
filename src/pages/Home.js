@@ -9,7 +9,7 @@ export default function Home(){
             <HeaderContainer>
                 <Feature>
                     <Feature.Title>Welcome To Admin University</Feature.Title>
-                    <Feature.SubTitle>Manage Student Records</Feature.SubTitle>
+                    <Feature.SubTitle>Manage Students Courses</Feature.SubTitle>
                 </Feature>
             </HeaderContainer>
             <FooterContainer />

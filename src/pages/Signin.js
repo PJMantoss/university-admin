@@ -48,7 +48,7 @@ export default function Signin(){
                         </Form.Submit>
 
                         <Form.Text>
-                            Not an Admin? <Form.Link to="/signup">Register Now!</Form.Link>
+                            Not an Admin? <Form.Link to="/register">Register Now!</Form.Link>
                         </Form.Text>
 
                         <Form.TextSmall>
