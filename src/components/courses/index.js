@@ -6,8 +6,8 @@ export default function Courses(){
     return (
         <div>
             <CourseList />
-            <AddCourse />
-            <RemoveCourse />
+            <AddCourseForm />
+            <RemoveCourseForm />
         </div>
     )
 }
@@ -24,10 +24,10 @@ const CourseList = () => {
     )
 }
 
-const AddCourse = () => {
+const AddCourseForm = () => {
     const ref = useRef(null);
 
-    const createCourse = (e) => {
+    const createCourse = e => {
         e.preventDefault();
 
         //Get the course name from the form
@@ -35,7 +35,7 @@ const AddCourse = () => {
 
         //call the addCourse method
         if(courseData.length > 0){
-            AddCourse(course);
+            addCourse(course);
         }
 
         //reset form
@@ -46,7 +46,40 @@ const AddCourse = () => {
         <form ref="courseForm" onSubmit={createCourse}>
             <div className="form-group">
                 <label for="courseItem">
+                    Course List
                     <input type="text" id="courseItem" className="form-control" ref="courseName" />
+                </label>
+            </div>
+            <button type="submit" className="submit-btn">Add Course</button>
+        </form>
+    )
+}
+
+const RemoveCourseForm = () => {
+    const ref = useRef(null);
+
+    const selectCourseToRemove = e => {
+    let course = e.target.value;
+
+    //call the removeCourse() method
+    removeCourse(course);
+
+    //reset form
+    ref.removeCourseForm.reset();
+    }
+
+    return(
+        <form ref="removeCourseForm" onChange={selectCourseToRemove}>
+            <div className="form-group">
+                <label for="courseItem">
+                    <select id="select-course" className="form-control">
+                        <option value=""></option>
+                            {
+                                Object.keys(courseData).map(course => (
+                                    <option value={course}>{courseData[course]}</option>
+                                ))
+                            }
+                    </select>
                 </label>
             </div>
             <button type="submit" className="submit-btn">Add Course</button>
