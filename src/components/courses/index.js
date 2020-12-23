@@ -1,12 +1,12 @@
 import React from 'react';
-import { 
-    Container
-} from './styles/courses';
+import './styles.css'
 
-export default function Courses({ children, ...restProps }){
+export default function Courses(){
     return (
-        <Container {...restProps}>
-            <Inner>{children}</Inner>
-        </Container>
+        <div>
+            <CourseList />
+            <AddCourse />
+            <RemoveCourse />
+        </div>
     )
 }
