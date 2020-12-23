@@ -17,3 +17,11 @@ export const Frame = styled.div`
     max-width: 1200px;
     margin-bottom: 10px;
 `;
+
+export const Item = styled.div`
+    color: white;
+    margin-bottom: 10px;
+    &:first-of-type {
+        margin-top: 3em;
+    }
+`;
