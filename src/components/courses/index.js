@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import courseData from '../../data/courses.json';
 import './styles.css'
 
@@ -10,6 +10,19 @@ export default function Courses(){
             <RemoveCourseForm />
         </div>
     )
+}
+
+const AddCourse = newCourse => {
+    const [course, setCourse] = useState('');
+    
+    //create a unique key for each new course
+    let timeStamp = (new Date()).getTime();
+
+    //Update coure data object
+    courseData['code' + timeStamp] = newCourse;
+    
+    //set state
+    setCourse({ course: courseData });
 }
 
 const CourseList = () => {
@@ -35,7 +48,7 @@ const AddCourseForm = () => {
 
         //call the addCourse method
         if(courseData.length > 0){
-            addCourse(course);
+            AddCourse(course);
         }
 
         //reset form
@@ -55,6 +68,7 @@ const AddCourseForm = () => {
     )
 }
 
+//Form for deleting a course
 const RemoveCourseForm = () => {
     const ref = useRef(null);
 
