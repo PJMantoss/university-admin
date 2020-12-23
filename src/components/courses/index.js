@@ -12,8 +12,9 @@ export default function Courses(){
     )
 }
 
+//add course to list from form
 const AddCourse = newCourse => {
-    const [course, setCourse] = useState('');
+    const [course, setCourse] = useState(courseData);
     
     //create a unique key for each new course
     let timeStamp = (new Date()).getTime();
@@ -22,7 +23,18 @@ const AddCourse = newCourse => {
     courseData['code' + timeStamp] = newCourse;
     
     //set state
-    setCourse({ course: courseData });
+    setCourse({ course });
+}
+
+//remove course from list
+const RemoveCourse = (courseKey) => {
+    //initialize state
+    const [course, setCourse] = useState(courseData);
+
+    delete courseData[courseKey]
+
+    //set state
+    setCourse({ course });
 }
 
 const CourseList = () => {
@@ -76,7 +88,7 @@ const RemoveCourseForm = () => {
     let course = e.target.value;
 
     //call the removeCourse() method
-    removeCourse(course);
+    RemoveCourse(course);
 
     //reset form
     ref.removeCourseForm.reset();
