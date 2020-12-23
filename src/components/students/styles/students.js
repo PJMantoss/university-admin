@@ -25,3 +25,57 @@ export const Item = styled.div`
         margin-top: 3em;
     }
 `;
+
+export const Title = styled.h1`
+    font-size: 50px;
+    line-height: 1.1;
+    margin: 0 0 8px 0;
+    color: white;
+    text-align: center;
+    @media (max-width: 600px){
+        font-size: 35px;
+    }
+`;
+
+export const Header = styled.header`
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-bottom: 1px;
+    font-size: 26px;
+    font-weight: normal;
+    background: #303030;
+    padding: 0.8em 1.2em;
+    user-select: none;
+    align-items: center;
+    width: 100%;
+    @media(max-width: 600px){
+        font-size: 16px;
+    }
+    img {
+        filter: brightness(0) invert(1);
+        width: 24px;
+        @media(max-width: 600px){
+            width: 16px;
+        }
+    }
+`;
+
+export const Body = styled.body`
+    box-sizing: border-box;
+    transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+    font-size: 26px;
+    line-height: normal;
+    font-weight: normal;
+    background: #303030;
+    color: white;
+    padding: 0.8em 1.2em;
+    user-select: none;
+    align-items: center;
+    width: 100%;
+    @media(max-width: 600px){
+        font-size: 16px;
+        line-height: 22px;
+    }
+`;
