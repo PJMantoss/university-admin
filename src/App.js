@@ -19,6 +19,9 @@ function App() {
         <Route path={ROUTES.ADMIN}>
             <Admin />
         </Route>
+        <Route path={ROUTES.COURSES}>
+          <Courses />
+        </Route>
       </Switch>
     </Router>
   );
