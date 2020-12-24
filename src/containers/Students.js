@@ -1,5 +1,5 @@
 import React from 'react';
-import { Students, Courses } from '../components';
+import { Students } from '../components';
 import studentsData from '../data/students.json';
 
 export function StudentsContainer(){
@@ -10,9 +10,6 @@ export function StudentsContainer(){
             {studentsData.map((item) => (
                 <Students.Item key={item.id}>
                     <Students.Header>{item.name}</Students.Header>
-                    <Students.Body>
-                        <Courses />
-                    </Students.Body>
                 </Students.Item>
             ))}
             </Students.Frame>

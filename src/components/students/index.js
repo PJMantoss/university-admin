@@ -1,8 +1,7 @@
-import React, { useState, useContext, createContext } from 'react';
+import React, { useContext, createContext } from 'react';
 import { 
     Container, 
     Inner, 
-    Body, 
     Title, 
     Item, 
     Frame, 
@@ -25,13 +24,8 @@ Students.Frame = function StudentsFrame({ children, ...restProps }){
 }
 
 Students.Item = function StudentsItem({ children, ...restProps }){
-    const [toggleShow, setToggleShow] = useState(false);
 
-    return(
-        <ToggleContext.Provider value={{ toggleShow, setToggleShow }}>
-            <Item {...restProps}>{children}</Item>
-        </ToggleContext.Provider>
-    )
+    return <Item {...restProps}>{children}</Item>
 }
 
 Students.Title = function StudentsTitle({ children, ...restProps }){
@@ -51,10 +45,4 @@ Students.Header = function StudentsHeader({ children, ...restProps }){
            )}
         </Header>
     )
-}
-
-Students.Body = function StudentsBody({ children, ...restProps }){
-    const { toggleShow } = useContext(ToggleContext);
-
-    return toggleShow ? <Body {...restProps}>{children}</Body> : null;
 }
