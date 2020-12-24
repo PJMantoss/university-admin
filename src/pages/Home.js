@@ -8,8 +8,8 @@ export default function Home(){
         <>
             <HeaderContainer>
                 <Feature>
-                    <Feature.Title>Welcome To Admin University</Feature.Title>
-                    <Feature.SubTitle>Manage Students Courses</Feature.SubTitle>
+                    <Feature.Title>Welcome Admin</Feature.Title>
+                    <Feature.SubTitle>Sign In To View Students' List</Feature.SubTitle>
                 </Feature>
             </HeaderContainer>
             <FooterContainer />

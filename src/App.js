@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Signin, Register } from './pages';
+import { Home, Signin, Register, Admin } from './pages';
 import * as ROUTES from './routes/routes';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -16,8 +16,8 @@ function App() {
         <Route path={ROUTES.REGISTER}>
             <Register />
         </Route>
-        <Route path={ROUTES.DASHBOARD}>
-            <p>Dashboard PAGE</p>
+        <Route path={ROUTES.ADMIN}>
+            <Admin />
         </Route>
       </Switch>
     </Router>

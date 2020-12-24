@@ -10,7 +10,9 @@ export function StudentsContainer(){
             {studentsData.map((item) => (
                 <Students.Item key={item.id}>
                     <Students.Header>{item.name}</Students.Header>
-                    <Students.Body>{}</Students.Body>
+                    <Students.Body>
+                        <Courses />
+                    </Students.Body>
                 </Students.Item>
             ))}
             </Students.Frame>
