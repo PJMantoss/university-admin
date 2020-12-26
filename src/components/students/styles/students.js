@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
     display: flex;
-    border-bottom: 8px solid #222;
 `;
 
 export const Inner = styled.div`
@@ -53,6 +52,7 @@ export const Header = styled.header`
     user-select: none;
     align-items: center;
     width: 100%;
+    text-decoration: none;
 
     @media(max-width: 800px){
         font-size: 16px;

@@ -4,7 +4,7 @@ import { Link as MainRouterLink } from 'react-router-dom';
 export const Container = styled.section`
     display: flex;
     flex-direction: column;
-    min-height: 660px;
+    min-height: 600px;
     background: rgba(0,0,0,0.75);
     box-sizing: border-box;
     border-radius: 5px;
@@ -43,13 +43,13 @@ export const Title = styled.h1`
     margin-bottom: 28px;
 `;
 
-export const Text = styled.h1`
-    color: #737373;
+export const Text = styled.h2`
+    color: #cac8c8;
     font-size: 16px;
     font-weight: 500;
 `;
 
-export const TextSmall = styled.h2` 
+export const TextSmall = styled.h3` 
       font-size: 13px;
       color: #8c8c8c;
       line-height: normal;

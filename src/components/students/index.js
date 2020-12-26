@@ -1,4 +1,4 @@
-import React, { useContext, createContext } from 'react';
+import React from 'react';
 import { 
     Container, 
     Inner, 
@@ -7,8 +7,6 @@ import {
     Frame, 
     Header 
 } from './styles/students';
-
-const ToggleContext = createContext();
 
 export default function Students({ children, ...restProps }){
     return (
@@ -33,16 +31,10 @@ Students.Title = function StudentsTitle({ children, ...restProps }){
 }
 
 Students.Header = function StudentsHeader({ children, ...restProps }){
-    const {toggleShow, setToggleShow} = useContext(ToggleContext);
 
     return(
-        <Header onClick={() => setToggleShow(!toggleShow)} {...restProps}>
+        <Header {...restProps}>
            {children}
-           {toggleShow ? (
-               <img src="./images/icons/close-slim.png" alt="close" />
-           ) : (
-               <img src="./images/icons/add.png" alt="open" />
-           )}
         </Header>
     )
 }
