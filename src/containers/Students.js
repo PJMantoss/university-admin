@@ -9,9 +9,11 @@ export function StudentsContainer(){
             <Students.Title>Student List</Students.Title>
             <Students.Frame>
             {studentsData.map((item) => (
-                <Students.Item key={item.id}>
-                    <Students.Header>{item.name}</Students.Header>
-                </Students.Item>
+                <Link to="/courses">
+                    <Students.Item key={item.id}>
+                        <Students.Header>{item.name}</Students.Header>
+                    </Students.Item>
+                </Link>
             ))}
             </Students.Frame>
         </Students>

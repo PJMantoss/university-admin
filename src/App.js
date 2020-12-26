@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Signin, Register, Admin } from './pages';
+import { Home, Signin, Register, Admin, CoursePage } from './pages';
 import * as ROUTES from './routes/routes';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ function App() {
             <Admin />
         </Route>
         <Route path={ROUTES.COURSES}>
-          <Courses />
+          <CoursePage />
         </Route>
       </Switch>
     </Router>
