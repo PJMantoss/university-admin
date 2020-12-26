@@ -5,10 +5,10 @@ import { HeaderContainer } from '../containers/Header';
 import { FooterContainer } from '../containers/Footer';
 
 const ListItem = ({ title, code, id, onRemoveClick }) => (
-    <div>
+    <div  style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between", color: "white", width: "100%"}}>
       {code} - {title}
       <span> </span>
-      <Form.Submit onClick={() => onRemoveClick(id)}>Remove</Form.Submit>
+      <Form.Submit style={{padding:"8px 12px"}} onClick={() => onRemoveClick(id)}>Remove</Form.Submit>
     </div>
   );
 
@@ -22,7 +22,7 @@ export default function CoursePage(){
           ...courseList,
           { id: courseList.length, title: newTitle, code: newCode }
         ];
-        setCourseList(courseList);
+        setCourseList(newCourse);
       };
 
       const removeCourse = id => {
@@ -32,20 +32,28 @@ export default function CoursePage(){
     return(
         <>
             <HeaderContainer />
-            <Form style={{maxWidth: 700}}>
+            <Form style={{maxWidth: 800, marginTop:30, marginBottom:30}}>
                 <Form.Title>Course List</Form.Title>
                 <Form.Base style={{maxWidth: 700}}>
                     <Form.Text>Code</Form.Text>
                     <Form.Input
                         type="text" 
-                        onChange={e => setCode(e.target.value)} 
+                        onChange={e => setCode(e.currentTarget.value)} 
                         value={newCode} 
                         placeholder="Code. e.g. CS102" 
                     />
 
-                    <Form.Submit onClick={addCourse}>Add Course</Form.Submit>
+                    <Form.Text>Title</Form.Text>
+                    <Form.Input
+                        type="text" 
+                        onChange={e => setTitle(e.currentTarget.value)} 
+                        value={newTitle} 
+                        placeholder="Title e.g. Introduction to CS" 
+                    />
+
+                    <Form.Submit style={{width:"40%", alignSelf: "center"}} onClick={addCourse}>Add Course</Form.Submit>
                     {courseList.map(item => (
-                        <ListItem style={{color: "white"}} key={item.id} { ...item } onRemoveClick={removeCourse} />
+                        <ListItem key={item.id} { ...item } onRemoveClick={removeCourse} />
                     ))}
                 </Form.Base>
             </Form>
