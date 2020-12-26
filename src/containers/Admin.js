@@ -8,6 +8,11 @@ import * as ROUTES from '../routes/routes';
 export function AdminContainer(){
     const { firebase } = useContext(FirebaseContext);
 
+    const user = {
+        displayName: "Carl",
+        photoURL: "1"
+    }
+
     return(
         <>
             <Header>
@@ -18,6 +23,10 @@ export function AdminContainer(){
                     
                     <Header.Group>
                         <Header.Profile>
+                            <Header.Group>
+                                <Header.Picture src={user.photoURL} />
+                                <Header.Link>{user.displayName}</Header.Link>
+                            </Header.Group>
                             <Header.Picture src="./images/avatar.jpg" />
 
                             <Header.Group>

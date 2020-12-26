@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Form } from '../components';
 import { HeaderContainer } from '../containers/Header';
 import { FooterContainer } from '../containers/Footer';
-// import * as ROUTES from '../constants/routes';
-// import { useHistory } from 'react-router-dom';
+import { FirebaseContext } from '../context/firebase';
+import * as ROUTES from '../routes/routes';
+import { useHistory } from 'react-router-dom';
 
 export default function Register(){
 
+    const history = useHistory();
+    const { firebase } = useContext(FirebaseContext);
+    
     //initialize states
     const [firstName, setFirstName] = useState('');
     const [emailAddress, setEmailAddress] = useState('');
@@ -21,6 +25,25 @@ export default function Register(){
         e.preventDefault();
 
         //call in firebase to handle registration/authentication
+        //if there's an error, populate the error state
+
+        firebase
+            .auth()
+            .createUserWithEmailAndPassword(emailAddress, password)
+            .then((result) => 
+                result.user
+                .updateProfile({
+                    displayName: firstName,
+                    photoURL: Math.floor(Math.random() * 5) + 1,
+                }))
+            .then(() => {
+                history.push(ROUTES.ADMIN);
+            })
+            .catch(err => {
+                setEmailAddress('');
+                setPassword('');
+                setError(err.message);
+            });
     }
 
     return(
