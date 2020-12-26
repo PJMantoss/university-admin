@@ -1,1 +1,1 @@
-export {default as authListener} from './auth-listener';
+export {default as AuthListener} from './auth-listener';

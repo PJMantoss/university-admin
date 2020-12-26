@@ -2,26 +2,36 @@ import React from 'react';
 import { Home, Signin, Register, Admin, CoursePage } from './pages';
 import * as ROUTES from './routes/routes';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+//Routes protection
+import { AuthListener } from './hooks';
+import { IsUserRedirect, ProtectedRoute } from './helpers/routes';
 
 function App() {
+  const { user } = AuthListener();
+
   return (
     <Router>
       <Switch>
-        <Route exact path={ROUTES.HOME}>
+        <IsUserRedirect user={user} loggedInPath={ROUTES.ADMIN} exact path={ROUTES.HOME}>
             <Home />
-        </Route>
-        <Route path={ROUTES.SIGN_IN}>
+        </IsUserRedirect>
+
+        <IsUserRedirect user={user} loggedInPath={ROUTES.ADMIN} path={ROUTES.SIGN_IN}>
             <Signin />
-        </Route>
-        <Route path={ROUTES.REGISTER}>
+        </IsUserRedirect>
+
+        <IsUserRedirect user={user} loggedInPath={ROUTES.ADMIN} path={ROUTES.REGISTER}>
             <Register />
-        </Route>
-        <Route path={ROUTES.ADMIN}>
+        </IsUserRedirect>
+
+        <ProtectedRoute user={user} path={ROUTES.ADMIN}>
             <Admin />
-        </Route>
-        <Route path={ROUTES.COURSES}>
+        </ProtectedRoute>
+
+        <ProtectedRoute user={user} loggedInPath={ROUTES.ADMIN} path={ROUTES.COURSES}>
           <CoursePage />
-        </Route>
+        </ProtectedRoute>
+
       </Switch>
     </Router>
   );
