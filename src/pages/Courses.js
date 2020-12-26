@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Form } from '../components';
 import {courseData} from '../data/courses';
-import { HeaderContainer } from '../containers/Header';
+import { Header } from '../components';
 import { FooterContainer } from '../containers/Footer';
+import * as ROUTES from '../routes/routes';
+import { FirebaseContext } from '../context/firebase';
+import { Link } from 'react-router-dom';
 
 const ListItem = ({ title, code, id, onRemoveClick }) => (
     <div  style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between", color: "white", width: "100%"}}>
@@ -16,6 +19,8 @@ export default function CoursePage(){
     const [courseList, setCourseList] = useState(courseData);
     const [newCode, setCode] = useState("");
     const [newTitle, setTitle] = useState("");
+
+    const { firebase } = useContext(FirebaseContext);
 
     const addCourse = () => {
         const newCourse = [
@@ -31,7 +36,28 @@ export default function CoursePage(){
 
     return(
         <>
-            <HeaderContainer />
+            <Header>
+                <Header.Frame>
+                    <Header.Group>
+                        <Header.Logo to={ROUTES.ADMIN} src="./images/logo.svg" alt="Admin" />
+                    </Header.Group>
+                    
+                    <Header.Group>
+                        <Header.Profile>
+                            <Header.Picture src="./images/avatar.jpg" />
+
+                            <Header.Group>
+                                <Header.Link>
+                                    <Link to="/admin" style={{textDecoration:"none", color:"#fff"}}>Students</Link>
+                                </Header.Link>
+                                <Header.Link onClick={() => firebase.auth().signOut()}>
+                                    Sign Out
+                                </Header.Link>
+                            </Header.Group>
+                        </Header.Profile>
+                    </Header.Group>
+                </Header.Frame>
+            </Header>
             <Form style={{maxWidth: 800, marginTop:30, marginBottom:30}}>
                 <Form.Title>Course List</Form.Title>
                 <Form.Base style={{maxWidth: 700}}>

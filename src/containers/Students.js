@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export function StudentsContainer(){
     return(
         <Students>
-            <Students.Title>Student List</Students.Title>
+            <Students.Title style={{color:"#000"}}>Student List</Students.Title>
             <Students.Frame>
             {studentsData.map((item) => (
                 <Link to="/courses">

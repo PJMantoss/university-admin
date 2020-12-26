@@ -13,7 +13,7 @@ export function AdminContainer(){
             <Header>
                 <Header.Frame>
                     <Header.Group>
-                        <Header.Logo to={ROUTES.ADMIN} src="./images/logo.svg" alt="Admin" />
+                        <Header.Logo to={ROUTES.HOME} src="./images/logo.svg" alt="logo" />
                     </Header.Group>
                     
                     <Header.Group>
