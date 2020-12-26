@@ -74,6 +74,10 @@ export const Logo = styled.img`
         height: 45px;
         width: 167px;
     }
+
+    @media(max-width: 900px){
+        margin-left: 20px
+    }
 `;
 
 export const Group = styled.div`

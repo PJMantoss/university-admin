@@ -15,7 +15,7 @@ const ListItem = ({ title, code, id, onRemoveClick }) => (
 export default function CoursePage(){
     const [courseList, setCourseList] = useState(courseData);
     const [newCode, setCode] = useState("");
-    const [newTitle, setTitle] = useState("Title");
+    const [newTitle, setTitle] = useState("");
 
     const addCourse = () => {
         const newCourse = [
@@ -51,12 +51,18 @@ export default function CoursePage(){
                         placeholder="Title e.g. Introduction to CS" 
                     />
 
-                    <Form.Submit style={{width:"40%", alignSelf: "center"}} onClick={addCourse}>Add Course</Form.Submit>
+                    <Form.Submit style={{width:"50%", alignSelf: "center", padding:"12px 14px"}} onClick={addCourse}>Add Course</Form.Submit>
                     {courseList.map(item => (
                         <ListItem key={item.id} { ...item } onRemoveClick={removeCourse} />
                     ))}
                 </Form.Base>
             </Form>
+            <div style={{margin:"auto", display:"flex", flexDirection:"column", alignItems:"center"}}>
+                <details >
+                    <summary>Debugging(View Course Data Object)</summary>
+                    <pre>{JSON.stringify(courseList, null, 2)}</pre>
+                </details>
+            </div>
             <FooterContainer />
         </>
     )
