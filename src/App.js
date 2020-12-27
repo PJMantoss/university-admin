@@ -1,7 +1,7 @@
 import React from 'react';
 import { Home, Signin, Register, Admin, CoursePage } from './pages';
 import * as ROUTES from './routes/routes';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch } from 'react-router-dom';
 //Routes protection
 import { AuthListener } from './hooks';
 import { IsUserRedirect, ProtectedRoute } from './helpers/routes';
