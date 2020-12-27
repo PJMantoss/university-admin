@@ -1,6 +1,26 @@
-How to run & test project?
+TECHNOLIES OVERVIEW
 
-Install dependencies
+-React
+
+-Styled Components(CSS in JS)
+
+-Firebase Auth
+
+HOW TO RUN & TEST PROJECT?
+
+WEB ARCHITECTURE
+
+Root folder - public/images and src. Within the src folder are the following directories:
+
+Components, data, Containers and Pages
+
+DESIGN PATTERN: Compound Components - a design pattern in React that allows for writing CSS in JavaScript.
+
+CLONE THE PROJECT
+
+git clone https://github.com/PJMantoss/university-admin.git
+
+INSTALL DEPENDENDCIES
 
 yarn add react-router-dom
 
@@ -8,14 +28,11 @@ yarn add styled-components
 
 yarn add normalize.css
 
-Clone the Project
 
-git clone https://github.com/PJMantoss/university-admin.git
-
-Run Project
+START THE PROJECT
 
 yarn start
 
-Test Project
+TEST PROJECT
 
 yarn test

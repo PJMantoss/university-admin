@@ -2,15 +2,19 @@ import { useState, useContext, useEffect } from 'react';
 import { FirebaseContext } from '../context/firebase';
 
 export default function AuthListener(){
+    //initialize state
     const [user, setUser] = useState();
+
+    //Hook into firebase via the context created in /context 
     const { firebase } = useContext(FirebaseContext);
 
-    useEffect(() => {
+    // useEffect to lookout for changes 
+    useEffect(() => { //If there's no authenticated user, 
         const listener = firebase.auth().onAuthStateChanged((authUser) => {
-            if(authUser){
+            if(authUser){  //if there's an authenticated user, stringify and put in local storage
                 localStorage.setItem('authUser', JSON.stringify(authUser));
                 setUser(authUser);
-            } else {
+            } else { //if no authenticated user, remove
                 localStorage.removeItem('authUser');
                 setUser(null);
             }
