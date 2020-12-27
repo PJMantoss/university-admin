@@ -5,12 +5,12 @@ export function IsUserRedirect({ user, loggedInPath, children, ...restProps }){
     return(
         <Route 
             {...restProps} 
-            render={() => {
+            render={() => { //if no user read regular component
                 if(!user){
                     return children;
                 }
 
-                if(user){
+                if(user){ //if there's user redirect to the admin page
                     return(
                         <Redirect to={{ pathname: loggedInPath }} />
                     );
