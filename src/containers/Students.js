@@ -8,7 +8,7 @@ export function StudentsContainer(){
         <Students>
             <Students.Title style={{color:"#000"}}>Student List</Students.Title>
             <Students.Frame>
-            {studentsData.map((item) => (
+            {studentsData.map((item) => ( //iterate through students json data to print out list
                 <Link to="/courses">
                     <Students.Item key={item.id}>
                         <Students.Header>{item.name}</Students.Header>

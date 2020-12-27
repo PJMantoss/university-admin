@@ -6,6 +6,7 @@ import { FirebaseContext } from '../context/firebase';
 import * as ROUTES from '../routes/routes';
 
 export function AdminContainer(){
+    //Hook into firebase via context created in /context 
     const { firebase } = useContext(FirebaseContext);
 
     const user = {

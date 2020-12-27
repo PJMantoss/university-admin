@@ -3,7 +3,7 @@ import { Home, Signin, Register, Admin, CoursePage } from './pages';
 import * as ROUTES from './routes/routes';
 import { HashRouter as Router, Switch } from 'react-router-dom';
 //Routes protection
-import { AuthListener } from './hooks';
+import { AuthListener } from './hooks'; //pull in custom hooks from /hooks
 import { IsUserRedirect, ProtectedRoute } from './helpers/routes';
 
 function App() {
