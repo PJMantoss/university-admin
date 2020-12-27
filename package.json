@@ -1,5 +1,6 @@
 {
   "name": "university-admin",
+  "homepage": "https://pjmantoss.github.io/university-admin",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -13,11 +13,11 @@ function App() {
     <Router>
       <Switch>
         <IsUserRedirect user={user} loggedInPath={ROUTES.ADMIN} exact path={ROUTES.HOME}>
-            <Home />
+            <Home /> {/*If on Home page and auth user, redirect to 'Admin' page*/}
         </IsUserRedirect>
 
         <IsUserRedirect user={user} loggedInPath={ROUTES.ADMIN} path={ROUTES.SIGN_IN}>
-            <Signin />
+            <Signin /> {/*If already an admin, redirect to Admin page*/}
         </IsUserRedirect>
 
         <IsUserRedirect user={user} loggedInPath={ROUTES.ADMIN} path={ROUTES.REGISTER}>
@@ -25,11 +25,11 @@ function App() {
         </IsUserRedirect>
 
         <ProtectedRoute user={user} path={ROUTES.ADMIN}>
-            <Admin />
+            <Admin /> {/*If not an admin, redirect to 'Sign In' page*/}
         </ProtectedRoute>
 
         <ProtectedRoute user={user} loggedInPath={ROUTES.ADMIN} path={ROUTES.COURSES}>
-          <CoursePage />
+          <CoursePage /> {/*If not an admin, redirect to 'Sign In' page*/}
         </ProtectedRoute>
 
       </Switch>

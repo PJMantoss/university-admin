@@ -26,11 +26,11 @@ export function ProtectedRoute({ user, children, ...restProps }){
         <Route 
             {...restProps} 
             render={({ location }) => {
-                if(user){
+                if(user){ //if an auth user read current component
                     return children
                 }
 
-                if(!user){
+                if(!user){ //if not user redirect to /signin
                     return(
                         <Redirect 
                             to={{
