@@ -26,7 +26,7 @@ describe('Sign In', () => {
   test('submits login information', () => {
     render(
       <MemoryRouter>
-        <Home />
+        <Signin />
       </MemoryRouter>
     );
   
