@@ -31,7 +31,7 @@ export function AdminContainer(){
                             <Header.Picture src="./images/avatar.jpg" />
 
                             <Header.Group>
-                                <Header.Link onClick={() => firebase.auth().signOut()}>
+                                <Header.Link onClick={() => firebase.auth().signOut()} style={{color:"#000"}}>
                                     Sign Out
                                 </Header.Link>
                             </Header.Group>
