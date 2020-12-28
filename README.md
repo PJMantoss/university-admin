@@ -20,9 +20,10 @@ git clone https://github.com/PJMantoss/university-admin.git
 
 INSTALL DOCKER
 
-sudo apt install docker-ce (NOTE: Make sure you install Pre-requisite Packages and add Docker Repositories before installation)
+sudo apt install docker-ce 
+(NOTE: Make sure you install Pre-requisite Packages and add Docker Repositories before installation)
 
-INSTALL DEPENDENDCIES
+INSTALL DEPENDENCIES
 
 yarn add react-router-dom
 
@@ -34,11 +35,13 @@ RUN DOCKER IMAGE
 
 sudo docker run reactimage
 
-Open another window terminal
+OPEN A NEW TERMINAL WINDOW
 
 run sudo docker ps
+(inside the new terminal)
 
-run sudo docker exec -it [CONTAINER ID] sh (replace CONTAINER ID with the actual values displayed in previous step. Type it in without the angle brackets []).
+run sudo docker exec -it [CONTAINER ID] sh 
+(replace CONTAINER ID with the actual values displayed in previous step. Type it in without the angle brackets []).
 
 type ls after /app # and press enter to see contents of container
 
@@ -46,7 +49,7 @@ run npm start
 
 when asked whether you'd like to run app on another port, type y
 
-Open another terminal tab/window for the next step
+Open another terminal tab/window to start project
 
 START THE PROJECT
 
