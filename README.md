@@ -10,12 +10,6 @@ TECHNOLOGIES OVERVIEW
 
 -Docker
 
-WEB ARCHITECTURE
-
-Root folder - public/images and src. Within the src folder are the following directories:
-
-components, data, containers and pages
-
 DESIGN PATTERN: Compound Components - a design pattern in React that allows for writing CSS in JavaScript.
 
 HOW TO RUN & TEST PROJECT?
@@ -26,6 +20,8 @@ git clone https://github.com/PJMantoss/university-admin.git
 
 INSTALL DOCKER
 
+sudo apt install docker-ce (NOTE: Make sure you install Pre-requisite Packages and add Docker Repositories before installation)
+
 INSTALL DEPENDENDCIES
 
 yarn add react-router-dom
@@ -33,11 +29,6 @@ yarn add react-router-dom
 yarn add styled-components
 
 yarn add normalize.css
-
-
-START THE PROJECT
-
-yarn start
 
 RUN DOCKER IMAGE
 
@@ -55,7 +46,11 @@ run npm start
 
 when asked whether you'd like to run app on another port, type y
 
-Open another terminal tab and run yarn start
+Open another terminal tab/window for the next step
+
+START THE PROJECT
+
+yarn start
 
 TEST PROJECT
 

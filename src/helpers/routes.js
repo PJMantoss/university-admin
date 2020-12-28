@@ -5,12 +5,12 @@ export function IsUserRedirect({ user, loggedInPath, children, ...restProps }){
     return(
         <Route 
             {...restProps} 
-            render={() => { //if no user read regular component
+            render={() => { //if no user, read regular component
                 if(!user){
                     return children;
                 }
 
-                if(user){ //if there's user redirect to the admin page
+                if(user){ //if there's user, redirect to the admin page
                     return(
                         <Redirect to={{ pathname: loggedInPath }} />
                     );
@@ -26,7 +26,7 @@ export function ProtectedRoute({ user, children, ...restProps }){
         <Route 
             {...restProps} 
             render={({ location }) => {
-                if(user){ //if an auth user read current component
+                if(user){ //if an auth user, read current component
                     return children
                 }
 

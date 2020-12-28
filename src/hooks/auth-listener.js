@@ -9,12 +9,12 @@ export default function AuthListener(){
     const { firebase } = useContext(FirebaseContext);
 
     // useEffect to lookout for changes 
-    useEffect(() => { //If there's no authenticated user, 
+    useEffect(() => {
         const listener = firebase.auth().onAuthStateChanged((authUser) => {
             if(authUser){  //if there's an authenticated user, stringify and put in local storage
                 localStorage.setItem('authUser', JSON.stringify(authUser));
                 setUser(authUser);
-            } else { //if no authenticated user, remove
+            } else { //if not authenticated user, remove
                 localStorage.removeItem('authUser');
                 setUser(null);
             }
