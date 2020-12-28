@@ -8,7 +8,7 @@ export const Background = styled.section`
     '../images/home-bg.jpg')}) top left / cover no-repeat;
 
     /*Only show background images screens larger than 1100px*/
-    @media(max-width: 1100px){
+    @media(max-width: 900px){
         ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none`}
     }
 `;
