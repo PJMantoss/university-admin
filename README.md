@@ -10,7 +10,7 @@ TECHNOLOGIES OVERVIEW
 
 -Docker
 
-DESIGN PATTERN: Compound Components - a design pattern in React that allows for writing CSS in JavaScript.
+DESIGN PATTERN: Compound Components - a design pattern in React in which a component is composed of a subset of child components that all work in tandem to produce some functionality.
 
 HOW TO RUN & TEST PROJECT?
 
