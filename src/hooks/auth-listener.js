@@ -22,7 +22,7 @@ export default function AuthListener(){
  
         //clean up function
         return () => listener();
-    }, []);
+    });
 
     return { user };
 }

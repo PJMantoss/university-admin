@@ -19,7 +19,7 @@ export function AdminContainer(){
             <Header>
                 <Header.Frame>
                     <Header.Group>
-                        <Header.Logo to={ROUTES.HOME} src={"./images/logo.svg"} alt="logo" />
+                        <Header.Logo to={ROUTES.HOME} src={process.env.PUBLIC_URL +"/images/logo.svg"} alt="logo" />
                     </Header.Group>
                     
                     <Header.Group>
@@ -30,7 +30,7 @@ export function AdminContainer(){
                             </Header.Group>
 
                             <Header.Group>
-                                <Header.Link onClick={() => firebase.auth().signOut()} style={{color:"#000"}}>
+                                <Header.Link onClick={() => firebase.auth().signOut()} style={{color:"#fff", paddingLeft:10}}>
                                     Sign Out
                                 </Header.Link>
                             </Header.Group>

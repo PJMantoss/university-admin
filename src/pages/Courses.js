@@ -39,12 +39,12 @@ export default function CoursePage(){
             <Header>
                 <Header.Frame>
                     <Header.Group>
-                        <Header.Logo to={ROUTES.ADMIN} src="./images/logo.svg" alt="Admin" />
+                        <Header.Logo to={ROUTES.ADMIN} src={process.env.PUBLIC_URL + "/images/logo.svg"} alt="Admin" />
                     </Header.Group>
                     
                     <Header.Group>
                         <Header.Profile>
-                            <Header.Picture src="./images/avatar.jpg" />
+                            <Header.Picture src={process.env.PUBLIC_URL + "/images/avatar.jpg"} />
 
                             <Header.Group>
                                 <Header.Link>
