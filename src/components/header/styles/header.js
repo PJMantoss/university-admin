@@ -4,8 +4,8 @@ import { Link as MainRouterLink } from 'react-router-dom'
 export const Background = styled.section`
     display: flex;
     flex-direction: column;
-    background: url(${({ src }) => (src ? `../images/${src}.jpg` :
-    '../images/home-bg.jpg')}) top left / cover no-repeat;
+    background: url(${({ src }) => (src ? process.env.PUBLIC_URL + `/images/${src}.jpg` :
+    process.env.PUBLIC_URL + '/images/home-bg.jpg')}) top left / cover no-repeat;
 
     /*Only show background images screens larger than 1100px*/
     @media(max-width: 900px){
