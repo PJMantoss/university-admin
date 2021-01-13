@@ -1,6 +1,6 @@
 A simple application for a university admin to manually chose courses for students.
 
-This is a private project to demonstrate the use of React Router, Compound Components, Firebase Authentication and Docker. Project is still in development.
+This is a private project to demonstrate the use of React Router and Compound Components with Firebase Authentication and Docker. Project is still in development.
 
 TECHNOLOGIES OVERVIEW
 
