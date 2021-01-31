@@ -25,26 +25,6 @@ yarn add styled-components
 
 yarn add normalize.css
 
-RUN DOCKER IMAGE
-
-sudo docker run reactimage
-
-OPEN A NEW TERMINAL WINDOW
-
-run sudo docker ps
-(inside the new terminal)
-
-run sudo docker exec -it [CONTAINER ID] sh 
-(replace CONTAINER ID with the actual values displayed in previous step. Type it in without the angle brackets []).
-
-type ls after /app # and press enter to see contents of container
-
-run npm start
-
-when asked whether you'd like to run app on another port, type y
-
-Open another terminal tab/window to start project
-
 START THE PROJECT
 
 yarn start
