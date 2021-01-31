@@ -8,7 +8,6 @@ TECHNOLOGIES OVERVIEW
 - React Router
 - Styled Components(CSS in JS)
 - Firebase (Authentication)
-- Docker
 
 DESIGN PATTERN: Compound Components - a design pattern in React in which a component is composed of a subset of child components that all work in tandem to produce some functionality.
 
