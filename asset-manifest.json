@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/university-admin/static/css/main.af4530f5.chunk.css",
+    "main.js": "/university-admin/static/js/main.1f9e7a1a.chunk.js",
+    "main.js.map": "/university-admin/static/js/main.1f9e7a1a.chunk.js.map",
+    "runtime-main.js": "/university-admin/static/js/runtime-main.3e2e2852.js",
+    "runtime-main.js.map": "/university-admin/static/js/runtime-main.3e2e2852.js.map",
+    "static/js/2.ad79d315.chunk.js": "/university-admin/static/js/2.ad79d315.chunk.js",
+    "static/js/2.ad79d315.chunk.js.map": "/university-admin/static/js/2.ad79d315.chunk.js.map",
+    "index.html": "/university-admin/index.html",
+    "static/css/main.af4530f5.chunk.css.map": "/university-admin/static/css/main.af4530f5.chunk.css.map",
+    "static/js/2.ad79d315.chunk.js.LICENSE.txt": "/university-admin/static/js/2.ad79d315.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3e2e2852.js",
+    "static/js/2.ad79d315.chunk.js",
+    "static/css/main.af4530f5.chunk.css",
+    "static/js/main.1f9e7a1a.chunk.js"
+  ]
+}
