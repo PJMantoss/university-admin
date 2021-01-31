@@ -17,11 +17,6 @@ CLONE THE PROJECT
 
 git clone https://github.com/PJMantoss/university-admin.git
 
-INSTALL DOCKER
-
-sudo apt install docker-ce 
-(NOTE: Make sure you install Pre-requisite Packages and add Docker Repositories before installation)
-
 INSTALL DEPENDENCIES
 
 yarn add react-router-dom
